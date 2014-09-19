@@ -497,7 +497,7 @@ else
         ./configure || die "otcl-$OTCLVER configuration failed! Exiting ...";
 fi
 
-if make 
+if make CFLAGS="-fno-stack-protector"
 then
 	echo "otcl-$OTCLVER has been installed successfully."
 else
